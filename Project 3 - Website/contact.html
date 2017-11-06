@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Contact Us</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link href="webcss.css" rel="stylesheet" type="text/css" />
+<script>
+function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("did").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","contact.xml",true);
+xmlhttp.send();
+}
+</script>
+</head>
+
+<body>
+
+<div id="wrapper">
+   <div id="banner">
+   <img alt="banner" height="95" src="banner.png" width="770" />
+   	</div>
+   <div id="nav">
+   		<ul>
+   			<li> <a href="home.html"> Home </a></li>
+   			<li> <a href="join.html"> Join Group </a></li>
+   			<li> <a href="resources.html"> Resources </a></li>
+   			<li> <a href="contact.html"> Contact Us </a></li>
+   		</ul>
+   	</div>
+   <div id="content">
+   <h1>Contact us:</h1>
+   <p>If you need any help, please contact us at:</p>
+   <button id="b" onclick="loadXMLDoc()" name="get">Click here to get our number:</button>
+   <p id="did"></p>
+   <br />
+   <button onclick="stopImg()">Stop</button>
+   <a href="">
+    <img id="imgRand" src="blank.png" alt="Java"></img>
+    <script type="text/javascript">
+    function setImg(){
+    	//variable to store random number for images
+    	var imgValue = Math.floor(Math.random() * (12 - 10 + 1)) + 10;
+		//show the random image generated
+		document.getElementById("imgRand").src = "image" + imgValue + ".png";
+		}
+		//call it the first time
+		 setImg();
+		 //set an interval to change it every 3 seconds
+		 var interval = window.setInterval("setImg()", 1000);
+		 function stopImg(){
+			 
+		 clearInterval(interval);
+		 }
+		 
+	</script>
+</a>
+</div>
+   <div id="footer">
+   	<p>This website is created by Palak Patel. This is strictly for education purpose only. Email: ppatel19@gmu.edu</p>
+   	<p> This document was last modified on: </p>
+   <script type="text/javascript">
+	//call lastModified method to show the last date and time modified for this website.
+	document.write(document.lastModified);
+	</script>
+
+   	</div>
+   	</div>
+</body>
+
+</html>

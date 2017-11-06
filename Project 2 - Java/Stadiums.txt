@@ -1,0 +1,9 @@
+State|Stadiums
+Virginia|RFK Stadium
+Virginia|Verizon Center
+Virginia|Bowie Baysox
+Delaware|Delaware Stadium
+Maryland|Byrd Stadium
+
+State|Stadium
+State|Stadium

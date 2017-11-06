@@ -1,0 +1,7 @@
+Stadiums|Events
+RFK Stadium|Washington Capitals vs. Nashville Predators
+RFK Stadium|Baltimore Ravens vs. Green Bay Packers
+RFK Stadium|Washington Redskins vs. Chicago Bears
+Verizon Center|Lady Gaga Concert
+Verizon Center|Drake Concert
+Bowie Baysox|Basball Game

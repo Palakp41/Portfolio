@@ -1,0 +1,27 @@
+<?xml version = "1.0"?>
+  <covers>
+  	  <cover>
+         <image>Object-Oriented Programming Language</image>
+         <title>Teaches you the core concepts behind object-oriented programming: objects, messages, classes, and inheritance. This lesson ends by showing you how these concepts translate into code. Feel free to skip this lesson if you are already familiar with object-oriented programming.</title>
+      </cover>
+      <cover>
+         <image>Language Basics</image>
+         <title>Describes the traditional features of the language, including variables, arrays, data types, operators, and control flow.</title>
+      </cover>
+       <cover>
+         <image>Classes and Objects</image>
+         <title>Describes how to write the classes from which objects are created, and how to create and use the objects.</title>
+      </cover>
+	  <cover>
+         <image>Interfaces and Inheritance</image>
+         <title>Describes interfaces—what they are, why you would want to write one, and how to write one. This section also describes the way in which you can derive one class from another. That is, how a subclass can inherit fields and methods from a superclass. You will learn that all classes are derived from the Object class, and how to modify the methods that a subclass inherits from superclasses.</title>
+      </cover>
+	  <cover>
+         <image>Numbers and Strings</image>
+         <title>This lesson describes how to use Number and String objects The lesson also shows you how to format data for output.</title>
+      </cover>
+	  <cover>
+         <image>Packages</image>
+         <title>Feature of the Java programming language that help you to organize and structure your classes and their relationships to one another.</title>
+      </cover>
+  </covers>

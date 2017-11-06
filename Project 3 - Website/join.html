@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Join Group</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link href="webcss.css" rel="stylesheet" type="text/css" />
+<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.27/jquery.form-validator.min.js"></script>
+<script src="form-validator/jquery.form-validator.js"></script>
+<script type="text/javascript">
+function newaccountOpen(){
+	open("newaccount.html");
+}
+function loginOpen(){
+	open("login.html");
+}
+</script>
+</head>
+
+<body>
+<div id="wrapper"> </div>
+   <div id="banner">
+   <img alt="banner" height="95" src="banner.png" width="770" />
+   	</div>
+   <div id="nav">
+   		<ul>
+   			<li> <a href="home.html"> Home </a></li>
+   			<li> <a href="join.html"> Join Group </a></li>
+   			<li> <a href="resources.html"> Resources </a></li>
+   			<li> <a href="contact.html"> Contact Us </a></li>
+   		</ul>
+   	</div>
+   <div id="content">
+   <h1 id="head1">Please Login: </h1>
+   <form method="post" action="login.html">
+	User Name: <input name="Text1" type="text" id="user1" data-validation="required" data-validation-length="3-5"></input><br></br>
+	Password: <input name="pass" type="password" data-validation="strength" data-validation-strength="2" /><br></br>
+	<input name="Submit1" type="submit" value="Submit" onclick="loginOpen()"></input>
+	</form>
+	<h1 id="head2">New User? Create an account:</h1>
+	<form action="newaccount.html" method="post">
+	First Name: <input name="Text" type="text"></input><br></br>
+	Last Name: <input name="Text" type="text"></input><br></br>
+	User Name:&nbsp; <input id="user" data-validation="required" data-validation-length="3-5" name="Text1" type="text"></input><br></br>
+	Password: <input name="Text2" type="password" data-validation="strength" data-validation-strength="2"></input><br></br>
+	Email Address: <input id="email" name="Text3" data-validation="required" data-validation-length="3-5" type="text"></input><br></br>
+	Phone Number: <input name="Text4" type="text"></input><br></br>
+    Birthdate: <input id="birth" name="Text5" type="text" /><br />
+	<input name="Submit1" type="submit" value="Submit" onclick="newaccountOpen()"></input>&nbsp;&nbsp;
+	<input name="Reset1" type="reset" value="Reset"></input></form>
+    <script>
+$.validate({//validate funciton
+  modules : 'security',
+  onModulesLoaded : function() {
+    var optionalConfig = {
+      fontSize: '12pt',
+      padding: '4px',
+      bad : 'Very bad',
+      weak : 'Weak',
+      good : 'Good',
+      strong : 'Strong'
+    };
+
+    $('input[name="pass"]').displayPasswordStrength(optionalConfig);//password validate
+	 $('input[name="Text2"]').displayPasswordStrength(optionalConfig);//password validate
+	$('#user').restrictLength($('max-length-element'));//username validate
+	$('#user1').restrictLength($('max-length-element'));//username validate
+	$('#email').restrictLength( $('#max-length-element'));//email validate
+  }
+});
+</script>
+	<a href="">             
+    <img id="imgRand" src="blank.png" alt="Java"></img>
+    <script type="text/javascript">
+    	//variable to store random number for images
+    	var imgValue = Math.floor(Math.random() * (12 - 10 + 1)) + 10;
+		//show the random image generated
+		document.getElementById("imgRand").src = "image" + imgValue + ".png";
+	</script>
+    </a>    
+    </div>
+   <div id="footer">
+   	<p>This website is created by Palak Patel. This is strictly for education purpose only. Email: ppatel19@gmu.edu</p>
+   	<p> This document was last modified on: </p>
+   <script type="text/javascript">
+	//call lastModified method to show the last date and time modified for this website.
+	document.write(document.lastModified);
+	</script>
+
+   	</div>
+</body>
+
+</html>

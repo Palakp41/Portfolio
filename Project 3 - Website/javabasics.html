@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Home Page</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link href="webcss.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+//variable that will store the heading of the page entered by the user
+var user;
+
+//function to reset the heading of the page as per the user's choice
+function resetHead(){
+user = prompt("Please enter the heading", "Enter the heading text here:");
+//this line will call the element with id head1 and change the text of it.
+document.getElementById('head1').innerHTML = user;
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="wrapper">
+   <div id="banner">
+   <img alt="banner" height="95" src="banner.png" width="770" />
+   	</div>
+   <div id="nav">
+   		<ul>
+   			<li> <a href="home.html"> Home </a></li>
+   			<li> <a href="join.html"> Join Group </a></li>
+   			<li> <a href="resources.html"> Resources </a></li>
+   			<li> <a href="contact.html"> Contact Us </a></li>
+   		</ul>
+   	</div>
+   <div id="content">
+   <h1 id="head1">Welcome to Online Training for JAVA</h1>
+   <h1>Lab Exercise #9 </h1>
+	<table>
+	<thead>
+	<tr>
+	<th>ID</th>
+	<th>Title</th>
+	<th>Format</th>
+	<th>Genre</th>
+	</tr>
+	</thead>
+
+	<xsl:for-each select = "/covers/cover">
+	<tr>
+	<td><xsl:value-of select = "@id"/></td>
+	<td><xsl:value-of select = "paragraph"/></td>
+
+	<td><xsl:value-of select = "fo"/></td>
+	<td><xsl:value-of select = "gen"/></td>
+	</tr>
+	</xsl:for-each>
+	</table>
+  </div>
+   <div id="footer">
+   	<p>This website is created by Palak Patel. This is strictly for education purpose only. Email: ppatel19@gmu.edu</p>
+   	</div>
+   	</div>
+</body>
+
+</html>

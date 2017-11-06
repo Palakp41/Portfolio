@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Home Page</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link href="webcss.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script>
+$(document).ready(function() {//start ready function
+	$('#b').click(function() {
+		$.ajax({
+			url: "home.txt",
+			type: "GET",
+			datatype: "text",
+			success: function(data){//get data
+				$('#li1').text(data);
+			},
+			error: function(xhr, status, error) {//error function
+				alert("Status:", + status);
+				alert("Error message:", + error);
+			}
+		});//end ajax funciton
+	});//end click function
+});//end ready
+</script>
+</head>
+
+<body>
+
+<div id="wrapper">
+   <div id="banner">
+   <img alt="banner" height="95" src="banner.png" width="770" />
+   	</div>
+   <div id="nav">
+   		<ul>
+   			<li> <a href="home.html"> Home </a></li>
+   			<li> <a href="join.html"> Join Group </a></li>
+   			<li> <a href="resources.html"> Resources </a></li>
+   			<li> <a href="contact.html"> Contact Us </a></li>
+   		</ul>
+   	</div>
+   <div id="content">
+   <h1 id="head1">Welcome to Online Training for JAVA</h1>
+   <p>Welcome to our website. This website is to help you teach the basics of JAVA. Based upon your knowledge you will be raised to another level. It teaches you the basics of Java like variables, methods, arrays, objects and goes to another level like implementing, interfaces, and Graphical User Interface.</p>
+  <p>This website contains different links to other forums for help which are found under Resources tab. You can create a new account or login in if you are already our user. We will be updating the website with much more learning exercises soon.</p>
+	<h1>What Softwares you can use?</h1>
+    <button id="b">Click Me</button>
+    
+	<ol>
+	<li id="li1"></li>
+	</ol>
+	<p><img alt="image" height="128" src="image10.png" width="279" /></p>
+  </div>
+   <div id="footer">
+   	<p>This website is created by Palak Patel. This is strictly for education purpose only. Email: ppatel19@gmu.edu</p>
+   	</div>
+   	</div>
+</body>
+
+</html>

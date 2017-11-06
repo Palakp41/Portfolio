@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Loops</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link href="webcss.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id="wrapper">
+   <div id="banner">
+   <img alt="banner" height="95" src="banner.png" width="770" />
+   	</div>
+   <div id="nav">
+   		<ul>
+   			<li> <a href="home.html"> Home </a></li>
+   			<li> <a href="join.html"> Join Group </a></li>
+   			<li> <a href="resources.html"> Resources </a></li>
+   			<li> <a href="contact.html"> Contact Us </a></li>
+   		</ul>
+   	</div>
+   <div id="content">
+   <label id="lab1" ></label>
+   <label id="lab2" ></label>
+   <label id="lab3" ></label>
+   <script type="text/javascript">
+   //Create a variable array
+		var arr = new Array();
+		//initialize the arrays
+		arr[0] = "for - if you want to run the same code over and over again, each time with a different value";
+		arr[1] = "while - Loops can execute a block of code as long as a specified condition is true";
+		arr[2] = "switch - The switch statement is used to perform different action based on different conditions";
+		
+		for(var i=0; i<arr.length; i++){
+		//display the array
+		document.getElementById("lab"+(i+1)).innerHTML = arr[i] + "<br></br>";
+		}
+	</script>
+   <p><img alt="image" height="128" src="image10.png" width="279" /></p>
+  </div>
+   <div id="footer">
+   	<p>This website is created by Palak Patel. This is strictly for education purpose only. Email: ppatel19@gmu.edu</p>
+   	<p> This document was last modified on: </p>
+   <script type="text/javascript">
+	//call lastModified method to show the last date and time modified for this website.
+	document.write(document.lastModified);
+	</script>
+
+   	</div>
+   	</div>
+</body>
+
+</html>
